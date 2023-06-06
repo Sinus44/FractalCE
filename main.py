@@ -2,7 +2,6 @@ from Engine import *
 import time
 import random
 import math
-from datetime import datetime
 
 class Fractal:
 	def __init__(self, start_pos, window, symbol):
@@ -43,7 +42,7 @@ class Main_Window(Scene):
 			Fractal([[95, 37], [58, 61], [115, 71]], self.window, Symbol(char="#", text_color=Color.rgb_text(0, 255, 0))),
 			Fractal([[2, 52], [38, 26], [58, 61]], self.window, Symbol(char="#", text_color=Color.rgb_text(0, 0, 255))),
 		]
-		self.fractals = [
+		self.fractals2 = [
 			Fractal([
 				[0, self.window.h],
 				[self.window.w, self.window.h],
@@ -72,7 +71,7 @@ class Main_Window(Scene):
 		self.window.print()
 
 class Fractal_App:
-	def __init__(self, width=2000, height=300):
+	def __init__(self, width=150, height=75):
 		self.width = width
 		self.height = height
 
