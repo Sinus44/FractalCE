@@ -43,7 +43,7 @@ class Main_Window(Scene):
 			Fractal([[95, 37], [58, 61], [115, 71]], self.window, Symbol(char="#", text_color=Color.rgb_text(0, 255, 0))),
 			Fractal([[2, 52], [38, 26], [58, 61]], self.window, Symbol(char="#", text_color=Color.rgb_text(0, 0, 255))),
 		]
-		self.fractals2 = [
+		self.fractals = [
 			Fractal([
 				[0, self.window.h],
 				[self.window.w, self.window.h],
@@ -57,7 +57,6 @@ class Main_Window(Scene):
 
 	def draw(self):
 		#self.window.fill()
-		self.window.text(0,0,"AbCдЕфЖИИИ")
 		for event in self.window.input_tick():
 			print(event)
 			if event["type"] == "exit":
@@ -73,7 +72,7 @@ class Main_Window(Scene):
 		self.window.print()
 
 class Fractal_App:
-	def __init__(self, width=150, height=75):
+	def __init__(self, width=2000, height=300):
 		self.width = width
 		self.height = height
 
